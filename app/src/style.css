@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+:root {
+  --white: #f9f9f9;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Orbitron', sans-serif;
+}
+
+input[type='text'] {
+  padding: 0.5rem 1rem;
+}
+
+#app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 70px 1fr 70px;
+  grid-template-areas:
+    'header header header header header'
+    'main main main main main'
+    'footer footer footer footer footer';
+
+  color: var(--white);
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
