@@ -1,0 +1,30 @@
+#signUp-form {
+  grid-area: main;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#signUp-form h1,
+#signUp-form fieldset {
+  margin-bottom: 2rem;
+}
+
+#signUp-form input {
+  margin-bottom: 1rem;
+}
+
+#signUp-form fieldset {
+  padding: 2rem;
+  border: 2px solid var(--white);
+}
+
+#signUp-form fieldset legend {
+  padding: 0 0.8rem;
+}
+
+#signUp-form fieldset p {
+  font-size: 0.7rem;
+}

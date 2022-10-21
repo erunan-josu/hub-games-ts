@@ -1,1 +1,3 @@
-export const inputText = (id) => `<input type='text' id='${id}'>`
+export const inputText = (id: string) => `
+    <input type='text' id='${id}'>
+`
