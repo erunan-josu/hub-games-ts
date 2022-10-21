@@ -1,3 +1,3 @@
-export const Button = (text, id) => `
+export const Button = (text: string, id: string) => `
 <button id='${id}'>${text}</button>
 `

@@ -6,7 +6,7 @@ export const Header = () => {
   const template = `
         <header id='header'>
             ${Title(2, 'Hub Games')}
-            ${Button('Color Mode', 'color-mode-btn')}
+            ${Button('🎨 Color Mode', 'color-mode-btn')}
         </header>
     `
 
