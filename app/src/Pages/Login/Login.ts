@@ -13,9 +13,9 @@ export const Login = () => {
         ${Title(1, 'Hub - Games')}
         ${Title(3, 'Introduce user name')}
         ${inputText('login-input-user')}
-        ${Paragraph('login-error-p', '')}
-        ${inputPwd('login-input-pwd')}
-        ${Paragraph('login-error-p', '')}
+        ${Paragraph('login-error-name', '')}
+        ${inputPwd('login-input-pw')}
+        ${Paragraph('login-error-pw', '')}
         <div class='login-btns'>
           ${Button('Sign in', 'signUp-btn')}
           ${Button('Login', 'login-btn')}

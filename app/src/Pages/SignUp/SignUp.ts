@@ -10,9 +10,9 @@ export const SignUp = () => {
   const template = `
   <form id='signUp-form'>
     ${Title(1, 'Get Started')}
-    ${Fieldset('User name', inputText('newUserName'))}
-    ${Fieldset('Password', inputPwd('newUserPwd'))}
-    ${ButtonSubmit('Submit', 'signUp-submit')}
+    ${Fieldset('User name', inputText('sUp-u-name'), 'sUp-name-err')}
+    ${Fieldset('Password', inputPwd('sUp-u-pw'), 'sUp-pw-err')}
+    ${ButtonSubmit('Submit', 'sUp-submit')}
   </form>
   `
   const printSignUp = () => {

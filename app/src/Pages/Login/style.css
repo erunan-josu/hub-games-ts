@@ -15,13 +15,15 @@
   letter-spacing: 0.5rem;
 }
 
-.login-main input[type='text'] {
-  margin-bottom: 1rem;
+.login-main input[type='text'],
+.login-main input[type='password'] {
+  margin-bottom: 0.3rem;
 }
 
-.login-main #login-error-p {
+.login-main #login-error-name,
+.login-main #login-error-pw {
   font-size: 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .login-main .login-btns {

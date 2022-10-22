@@ -12,12 +12,14 @@ export const getPrevPage = () => {
   let prevPage = ''
   if (currentPage != null) {
     switch (currentPage) {
-      case 'signIn':
+      case 'signUp':
+        prevPage = 'login'
+        break
+      case 'hub-games':
         prevPage = 'login'
         break
     }
   }
-
   return prevPage
 }
 
@@ -28,4 +30,28 @@ export const getInputValue = (attr: string) => {
     value = input.value
   }
   return value
+}
+
+export const printErrorMsg = (attr: string, text: string) => {
+  const element = document.querySelector(attr) as HTMLElement | null
+  if (element !== null) {
+    element.textContent = text
+  }
+}
+
+export const activateElement = (attr: string, state: boolean) => {
+  const element = document.querySelector(attr) as HTMLInputElement | null
+  if (element !== null) {
+    element.disabled = state
+  }
+}
+
+type User = {
+  name: string
+  pw: string
+  id: string
+}
+
+export const checkUser = (prop: string, list: User[], val: string) => {
+  return list.findIndex((user) => user[prop as keyof User] === val)
 }

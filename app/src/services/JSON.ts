@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid'
 
-export const getUsers = async (path: string) => {
+export const getData = async (path: string) => {
   const data = await fetch(`http://127.0.0.1:3000/${path}`)
   const dataJSON = await data.json()
   return dataJSON

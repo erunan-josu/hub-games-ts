@@ -1,7 +1,7 @@
-export const Fieldset = (legend: string, inpt: string) => `
+export const Fieldset = (legend: string, inpt: string, pId: string) => `
 <fieldset>
     <legend>${legend}</legend>
     ${inpt}
-    <p>ladsfklk</p>
+    <p id=${pId}></p>
 </fieldset>
 `

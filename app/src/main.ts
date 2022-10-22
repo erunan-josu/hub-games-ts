@@ -1,4 +1,5 @@
 import './style.css'
 import { runPage } from './utils/runPage'
 
-runPage('login')
+const user = localStorage.getItem('user')
+user === null ? runPage('login') : runPage('hub-games')

@@ -1,3 +1,3 @@
 export const inputText = (id: string) => `
-    <input type='text' id='${id}'>
+    <input type='text' id='${id}' required>
 `
