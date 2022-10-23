@@ -8,6 +8,7 @@
 
 .login-main h1,
 .login-main h3 {
+  text-align: center;
   padding: 1rem;
 }
 
@@ -41,4 +42,10 @@
 
 .login-main .login-btns #signUp-btn:hover {
   border-bottom: 1px solid var(--white);
+}
+
+@media screen and (max-width: 540px) {
+  .login-main {
+    padding: 2rem;
+  }
 }

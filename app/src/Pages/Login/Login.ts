@@ -17,8 +17,8 @@ export const Login = () => {
         ${inputPwd('login-input-pw')}
         ${Paragraph('login-error-pw', '')}
         <div class='login-btns'>
-          ${Button('Sign in', 'signUp-btn')}
-          ${Button('Login', 'login-btn')}
+          ${Button('Sign Up', 'signUp-btn', '')}
+          ${Button('Login', 'login-btn', '')}
         </div>
     </main>
   `

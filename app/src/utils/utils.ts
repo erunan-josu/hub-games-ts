@@ -7,6 +7,15 @@ export const cleanContainer = (id: string) => {
   }
 }
 
+export const removeContainer = (id: string) => {
+  const element = document.querySelector(`${id}`) as HTMLElement | null
+  if (element != null) {
+    element.remove()
+  } else {
+    throw new Error(`cannot clean ${id} container`)
+  }
+}
+
 export const getPrevPage = () => {
   const currentPage = localStorage.getItem('page')
   let prevPage = ''
@@ -19,6 +28,9 @@ export const getPrevPage = () => {
         prevPage = 'login'
         break
       case 'pokedex':
+        prevPage = 'hub-games'
+        break
+      case 'quizz':
         prevPage = 'hub-games'
         break
       case 'tictactoe':

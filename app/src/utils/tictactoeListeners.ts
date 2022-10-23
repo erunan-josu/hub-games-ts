@@ -21,10 +21,7 @@ export const tictactoeListeners = () => {
 
 const reloadListener = () => {
   const reloadBtn = document.querySelector('#reload-btn')
-  console.log(reloadBtn)
-  if (reloadBtn != null) {
-    reloadBtn.addEventListener('click', reloadGame)
-  }
+  reloadBtn?.addEventListener('click', reloadGame)
 }
 
 const cellsListeners = () => {
@@ -65,6 +62,7 @@ const iaTurn = () => {
     }
     if (checkWin(cells, 'o-cell')) {
       showWinnerMsg()
+      alert('IA 👾 Wins!!!')
       return
     }
     player1 = !player1
@@ -106,7 +104,6 @@ const getRandomCell = (cells: NodeListOf<Element>) => {
 }
 
 const reloadGame = () => {
-  console.log('yeeeeeaaa')
   const cells = document.querySelectorAll('.cell')
 
   cells.forEach((cell) => {

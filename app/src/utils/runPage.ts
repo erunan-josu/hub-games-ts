@@ -1,4 +1,5 @@
 import { PokemonObj } from './pokedex/types'
+import { getData } from '../services/JSON'
 import { getPokemons } from '../services/pokemon/getPokemons'
 import { cleanContainer } from './utils'
 import { Login } from '../Pages/Login/Login'
@@ -13,6 +14,9 @@ import { Pokedex } from '../Pages/Pokedex/Pokedex'
 import { pokedexEvents } from './pokedex/pokedexEvents'
 import { TicTacToe } from '../Pages/TicTacToe/TicTacToe'
 import { tictactoeListeners } from './tictactoeListeners'
+import { Quizz } from '../Pages/Quizz/Quizz'
+import { Question } from './Quizz/types'
+import { quizzListeners } from './Quizz/quizzListeners'
 export const runPage = async (pageName: string) => {
   if (pageName != undefined) {
     switch (pageName) {
@@ -45,6 +49,14 @@ export const runPage = async (pageName: string) => {
         headerListeners()
         tictactoeListeners()
         break
+      case 'Quizz':
+        localStorage.setItem('page', 'quizz')
+        cleanContainer('#app')
+        let quizzData: Question[] = await getData('quizz')
+        await Quizz()
+        headerListeners()
+        quizzListeners(quizzData)
+        break
       case 'Pokedex':
         localStorage.setItem('page', 'pokedex')
         cleanContainer('#app')
@@ -61,7 +73,7 @@ export const runPage = async (pageName: string) => {
         pokedexEvents(pokemonsData)
         break
       default:
-        console.log('game not found')
+        alert('Game not found')
     }
   }
 }

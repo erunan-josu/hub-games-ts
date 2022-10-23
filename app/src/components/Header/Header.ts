@@ -5,9 +5,14 @@ import { Button } from '../Button'
 export const Header = (page: string) => {
   const template = `
         <header id='header'>
-            ${page != 'login' ? Button('🔙', 'go-back-btn') : ''}
+            ${page != 'login' ? Button('', 'go-back-btn', '🔙') : ''}
+            ${
+              page != 'login' && page != 'signUp'
+                ? Button('Logout', 'logout-btn', '🚫 ')
+                : ''
+            }
             ${Title(2, 'Hub Games')}
-            ${Button('🎨 Color Mode', 'color-mode-btn')}
+            ${Button('Color Mode', 'color-mode-btn', '🎨 ')}
         </header>
     `
 

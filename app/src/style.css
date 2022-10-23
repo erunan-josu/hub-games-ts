@@ -25,6 +25,10 @@ input[type='password'] {
   padding: 0.5rem 1rem;
 }
 
+li {
+  list-style: none;
+}
+
 #app {
   min-height: 100vh;
   display: grid;

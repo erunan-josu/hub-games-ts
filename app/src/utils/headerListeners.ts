@@ -2,6 +2,12 @@ import { changeBg } from './changeBg'
 import { getPrevPage } from './utils'
 import { runPage } from './runPage'
 
+export const headerListeners = () => {
+  goBack()
+  changeBgBtn()
+  logOut()
+}
+
 const goBack = () => {
   const goBackBtn = document.querySelector('#go-back-btn') as HTMLElement | null
 
@@ -23,7 +29,11 @@ const changeBgBtn = () => {
   }
 }
 
-export const headerListeners = () => {
-  goBack()
-  changeBgBtn()
+const logOut = () => {
+  const logoutBtn = document.querySelector('#logout-btn')
+  console.log(logoutBtn)
+  logoutBtn?.addEventListener('click', () => {
+    localStorage.removeItem('user')
+    runPage('login')
+  })
 }
