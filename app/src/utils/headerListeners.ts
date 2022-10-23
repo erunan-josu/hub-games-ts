@@ -4,11 +4,10 @@ import { runPage } from './runPage'
 
 const goBack = () => {
   const goBackBtn = document.querySelector('#go-back-btn') as HTMLElement | null
+
   if (goBackBtn != null) {
-    console.log('in')
     goBackBtn.addEventListener('click', () => {
       const prev = getPrevPage()
-      console.log(prev)
       runPage(prev)
     })
   }

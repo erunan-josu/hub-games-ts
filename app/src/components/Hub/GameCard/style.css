@@ -1,0 +1,15 @@
+.game-preview {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  transition: all 0.4s ease-in-out;
+}
+
+.game-preview:hover {
+  box-shadow: rgba(251, 251, 251, 0.2) 0px 2px 8px 0px;
+}
+
+.game-preview .game-card {
+  height: 100%;
+  width: 100%;
+}

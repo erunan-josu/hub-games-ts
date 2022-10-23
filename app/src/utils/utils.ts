@@ -18,6 +18,9 @@ export const getPrevPage = () => {
       case 'hub-games':
         prevPage = 'login'
         break
+      case 'pokedex':
+        prevPage = 'hub-games'
+        break
     }
   }
   return prevPage
