@@ -1,5 +1,5 @@
-import pikachu from '/images/pika.png'
-import pokeball from '/images/pokeball.png'
+import pikachu from '../../public/images/pika.png'
+import pokeball from '../../public/images/pokeball.png'
 import { getRandomNum } from './getRandomNum'
 
 const winCondition = [

@@ -4,7 +4,9 @@ export const Footer = () => {
     `
   const printFooter = () => {
     const app = document.querySelector('#app')
-    app.innerHTML += template
+    if (app != null) {
+      app.innerHTML += template
+    }
   }
 
   printFooter()

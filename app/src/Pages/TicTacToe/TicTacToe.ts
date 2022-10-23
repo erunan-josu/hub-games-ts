@@ -11,7 +11,7 @@ export const TicTacToe = () => {
       <div class='cells-container'></div>
       <div class='msg-container'>
         <p class='win-msg'></p>
-        ${Button('Reload', 'reload-btn')}
+        ${Button('Reload', 'reload-btn', '')}
       </div>
     </main>
     `
