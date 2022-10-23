@@ -26,9 +26,10 @@ const typeColors: Colors = {
 export const PkmnCard = (pokemon: PokemonObj) => {
   const { types, id, sprites, name } = pokemon
   const firstType = types[0].type.name
+  const color = typeColors[firstType]
 
   const pokemonCard = `
-    <figure data-num='${id}' class='pkmn-card' style="background: ${typeColors[firstType]}">
+    <figure data-num='${id}' class='pkmn-card' style="background: ${color}">
         <div class='pkmn-num-container'>
             <p class='pkmn-card-num'># ${id}</p>
         </div>

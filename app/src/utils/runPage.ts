@@ -11,6 +11,8 @@ import { Hub } from '../Pages/Hub/Hub'
 import { hubListeners } from './hubListeners'
 import { Pokedex } from '../Pages/Pokedex/Pokedex'
 import { pokedexEvents } from './pokedex/pokedexEvents'
+import { TicTacToe } from '../Pages/TicTacToe/TicTacToe'
+import { tictactoeListeners } from './tictactoeListeners'
 export const runPage = async (pageName: string) => {
   if (pageName != undefined) {
     switch (pageName) {
@@ -35,6 +37,13 @@ export const runPage = async (pageName: string) => {
         await Hub()
         headerListeners()
         hubListeners()
+        break
+      case 'TicTacToe':
+        localStorage.setItem('page', 'tictactoe')
+        cleanContainer('#app')
+        TicTacToe()
+        headerListeners()
+        tictactoeListeners()
         break
       case 'Pokedex':
         localStorage.setItem('page', 'pokedex')
